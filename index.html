@@ -3,191 +3,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta
-      name="theme-color"
-      content="#080d1b"
-    />
-
-    <meta
-      name="description"
-      content="Secure OTP Verification Portal. Sign in or register as a customer or service provider using mobile and email verification."
-    />
-
-    <title>OTP Verification | Secure Access</title>
-
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
+    <meta name="theme-color" content="#080d1b" />
+    <title>OTP Verification Portal</title>
     <style>
-      :root {
-        font-family: "Inter", system-ui, sans-serif;
-        color: #f4f7ff;
-        background: #080d1b;
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        min-width: 320px;
-        min-height: 100%;
-        background: #080d1b;
-      }
-
       body {
         margin: 0;
-        min-width: 320px;
         min-height: 100vh;
-        background:
-          radial-gradient(
-            ellipse at 15% 10%,
-            rgba(79, 70, 229, 0.15),
-            transparent 40%
-          ),
-          radial-gradient(
-            ellipse at 85% 90%,
-            rgba(6, 182, 212, 0.10),
-            transparent 40%
-          ),
-          #080d1b;
-      }
-
-      button,
-      input,
-      select,
-      textarea {
-        font: inherit;
-      }
-
-      button,
-      a {
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      button {
-        cursor: pointer;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
+        background: #080d1b;
+        color: #f8fafc;
+        font-family: Arial, sans-serif;
       }
 
       #root {
         min-height: 100vh;
       }
 
-      .app-loading {
+      .startup {
         min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 18px;
-        padding: 24px;
-      }
-
-      .loading-logo {
-        width: 64px;
-        height: 64px;
         display: grid;
-        place-items: center;
-        border: 1px solid rgba(129, 140, 248, 0.4);
-        border-radius: 20px;
-        background: linear-gradient(
-          135deg,
-          #6366f1,
-          #06b6d4
-        );
-        box-shadow: 0 12px 45px rgba(99, 102, 241, 0.25);
-        font-size: 28px;
-        font-weight: 800;
+        place-content: center;
+        text-align: center;
+        padding: 24px;
+        box-sizing: border-box;
       }
 
-      .loading-title {
-        margin: 0;
-        font-size: 19px;
-        font-weight: 700;
-        letter-spacing: -0.5px;
+      .startup h1 {
+        color: #818cf8;
       }
 
-      .loading-subtitle {
-        margin: 0;
+      .startup p {
         color: #94a3b8;
-        font-size: 13px;
       }
 
-      .loading-track {
-        width: 160px;
-        height: 4px;
-        overflow: hidden;
-        border-radius: 99px;
-        background: #1e293b;
-      }
-
-      .loading-progress {
-        width: 45%;
-        height: 100%;
-        border-radius: inherit;
-        background: linear-gradient(90deg, #818cf8, #22d3ee);
-        animation: loading 1.2s ease-in-out infinite alternate;
-      }
-
-      @keyframes loading {
-        from {
-          transform: translateX(0);
-        }
-
-        to {
-          transform: translateX(120px);
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          scroll-behavior: auto !important;
-        }
+      .startup button {
+        padding: 12px 20px;
+        background: #6366f1;
+        color: white;
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
       }
     </style>
   </head>
 
   <body>
     <div id="root">
-      <main class="app-loading" aria-label="Loading application">
-        <div class="loading-logo" aria-hidden="true">O</div>
-
-        <h1 class="loading-title">OTP Verification</h1>
-
-        <p class="loading-subtitle">
-          Preparing your secure authentication portal...
-        </p>
-
-        <div class="loading-track" aria-hidden="true">
-          <div class="loading-progress"></div>
-        </div>
+      <main class="startup">
+        <h1>OTP Verification</h1>
+        <p>Starting your secure authentication portal...</p>
+        <p>If this message remains, check the application files.</p>
+        <button onclick="location.reload()">Reload Application</button>
       </main>
     </div>
 
