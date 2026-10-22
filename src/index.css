@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium UI enhancements */
+body {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  min-height: 100vh;
+}
+
+/* Glass‑morphism card */
+.card {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+/* Subtle button hover micro‑animation */
+button:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
